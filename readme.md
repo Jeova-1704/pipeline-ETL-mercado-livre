@@ -309,7 +309,38 @@ vamos definir como False para não obedecer as regras do robots.txt, que é um a
 
 ---
 
+## Agora vamos para o tratamento dos dados com o pandas
 
+executando o comando abaixo, vamos pegar os dados do jsonl e vamos fazer o tratamento dos dados com o pandas.
+```bash
+python transformacao/main.py
+```
+
+Com o scraping pronto, vamos fazer o tratamento dos dados com o pandas, para isso, vamos criar um arquivo chamado "main.py", no package "src/transformacao" e vamos fazer o tratamento dos dados.
+
+Onde vamos fazer:
+
+1. criar um dataframe com os dados do json/jsonl/csv
+2. criar uma nova coluna com o source do site
+3. criar uma coluna nova com a data da coleta
+4. juntar as colunas de preço e centavos em uma nova coluna de preço
+5. deletar as colunas de preço e centavos antigas
+6. remover os parenteses da coluna de avaliação "()" 
+7. salvar as modificações em um arquivo sql usando o sqlite
+
+
+
+
+## rodando o streamlit
+Após toda a execução dos itens acima, vamos finalizar com o streamlit, para isso, basta entrar na pasta "src/dashboard" e executar o comando abaixo.
+
+```bash
+streamlit run app.py
+```
+
+
+## Conclusão
+Com isso, finalizamos o nosso projeto de scraping, transformação e dashboard com streamlit, onde conseguimos pegar os dados do site do mercado livre, transformar esses dados com o pandas e criar um dashboard com o streamlit.
 
 
 
